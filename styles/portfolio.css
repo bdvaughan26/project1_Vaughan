@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+body {
+        background-color: #c2d2bd;
+        margin: 0;
+}
+
+.home {
+        background-image: url(../images/welcome.gif);
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0;
+        min-height: 100vh;
+}
+
+nav {
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+}
+
+nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #d1adcc;
+        list-style-type: none;
+        padding: 5px;
+        margin: 0;
+}
+
+nav li {
+        display: inline;
+
+}
+
+nav a {
+        text-decoration: none;
+        font-family: 'Chewy';
+        font-size: 1.8em;
+        color: #f6e9d7;
+}
+
+main {
+        display: block;
+        background-color: #f6e9d7;
+        padding: 2em;
+        text-align: left;
+}
+
+main #content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+}
+
+main #content #intro {
+        padding-left: 5em;
+        padding-top: 0;
+        padding-bottom: 2em;
+        
+}
+
+h2 {
+        font-size: 8em;
+        font-family: 'Chewy';
+        color: #5f2c3e;
+        margin: 0;
+}
+
+section p {
+        font-size: 1.5em;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #5f2c3e;
+}
+
+footer {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f6e9d7;
+        background-color: #d1adcc;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1em;
+}
+
+.footer-column {
+        width: 32.5%;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Chewy", sans-serif;
+}
+
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 20px 0 20px;
+
+}
+
+.container .heading h3 {
+        font-size: 3em;
+        padding: 1em;
+        color: #5f2c3e;
+}
+
+
+
+.container .box .dream img {
+        width: 100%;
+        padding-bottom: 15px;
+        border-radius: 5px;
+}
+
+.container .box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+}
+
+.container .box .dream {
+        display: flex;
+        flex-direction: column;
+        width: 32.5%;
+}
+
+.paragraph {
+        color: #5f2c3e;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1em;
+}
+
+#ricos_img {
+        width: 100%;
+        height: 100vh;
+        margin-top: 1em;
+        margin-bottom: 1em;
+}
+
+.responsive {
+        max-width: 100%;
+        height: auto;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+        .home {
+                background-image: url(../images/welcome-tablet.gif);
+        }
+
+        main #content {
+                align-items: center;
+                flex-direction: column;
+        }
+
+        main #content #intro {
+                padding-left: 0;
+        }
+
+        .container .box {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+        }
+
+        .container .box .dream {
+                display: flex;
+                flex-direction: column;
+                width: 32.5%;
+        }
+
+        .container .heading h3 {
+                font-size: 3em;
+        }
+        
+}
+
+@media (max-width: 599px) {
+        .home {
+                background-image: url(../images/welcome-mobile.gif);
+        }
+
+        nav ul {
+                flex-direction: column;
+        }
+
+        main #content {
+                align-items: center;
+                flex-direction: column;
+        }
+
+        main #content #intro {
+                padding-left: 0;
+        }
+
+        .container .box {
+                flex-direction: column;
+        }
+
+        .container .box .dream {
+                width: 100%;
+        }
+
+        .container .heading h3 {
+                font-size: 3em;
+        }
+}
