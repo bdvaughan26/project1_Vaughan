@@ -66,6 +66,21 @@ main #content #intro {
         
 }
 
+/* .intro-picture{
+        display: flex;
+        height: 100%;
+        object-fit: fill;
+}
+
+.intro {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: blue;
+
+
+} */
+
 h2 {
         font-size: 8em;
         font-family: 'Chewy';
@@ -114,8 +129,9 @@ footer {
 
 .container .heading h3 {
         font-size: 3em;
-        padding: 1em;
         color: #5f2c3e;
+        padding: .8em;
+        
 }
 
 
@@ -141,7 +157,7 @@ footer {
 .paragraph {
         color: #5f2c3e;
         font-family: Arial, Helvetica, sans-serif;
-        padding: 1em;
+        padding-bottom: 2em;
 }
 
 #ricos_img {
@@ -216,5 +232,6 @@ footer {
 
         .container .heading h3 {
                 font-size: 3em;
+                padding-top: 2.5em;
         }
 }
