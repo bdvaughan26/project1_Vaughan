@@ -63,23 +63,8 @@ main #content #intro {
         padding-left: 5em;
         padding-top: 0;
         padding-bottom: 2em;
-        
+
 }
-
-/* .intro-picture{
-        display: flex;
-        height: 100%;
-        object-fit: fill;
-}
-
-.intro {
-        display: block;
-        width: 100%;
-        height: 100%;
-        color: blue;
-
-
-} */
 
 h2 {
         font-size: 8em;
@@ -95,7 +80,7 @@ section p {
 }
 
 footer {
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Chewy', Impact;
         color: #f6e9d7;
         background-color: #d1adcc;
         text-align: center;
@@ -114,7 +99,6 @@ footer {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Chewy", sans-serif;
 }
 
 .container {
@@ -131,14 +115,14 @@ footer {
         font-size: 3em;
         color: #5f2c3e;
         padding: .8em;
-        
+        font-family: 'Chewy', Impact;
 }
 
 
 
 .container .box .dream img {
         width: 100%;
-        padding-bottom: 15px;
+        margin-bottom: 15px;
         border-radius: 5px;
 }
 
@@ -154,10 +138,19 @@ footer {
         width: 32.5%;
 }
 
+.container .box img {
+        transition: all 0.2s ease-in;
+}
+
+.container .box img:hover {
+        transform: scale(1.1) rotate(2deg);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0.5);
+}
+
 .paragraph {
         color: #5f2c3e;
-        font-family: Arial, Helvetica, sans-serif;
         padding-bottom: 2em;
+        font-family: Arial, Helvetica, sans-serif;
 }
 
 #ricos_img {
@@ -170,6 +163,120 @@ footer {
 .responsive {
         max-width: 100%;
         height: auto;
+}
+
+#contact {
+        color: #5f2c3e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        column-gap: 3em;
+}
+
+#contact h3 {
+        font-family: 'Chewy', Impact;
+        font-size: 2em;
+        margin-bottom: 1em;
+}
+
+#contact p {
+        font-family: 'Chewy', Impact;
+}
+
+label[for="name"] {
+        font-family: 'Chewy', Impact;
+}
+
+label[for="message"] {
+        font-family: 'Chewy', Impact;
+}
+
+#subject {
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+form[name="contactme"] {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1em;
+}
+
+form[name="contactme"] input#name {
+        margin-bottom: 1em;
+}
+
+form[name="contactme"] textarea#message {
+        margin-bottom: 1em;
+}
+
+form[name="contactme"] input[type="submit"] {
+        margin-top: 1em;
+        font-family: 'Chewy', Impact;
+        color: #5f2c3e;
+}
+
+#contactinfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+#contactinfo h3 {
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        font-family: 'Chewy', Impact;
+        font-size: 2em;
+}
+
+#contactinfo table {
+        border-spacing: 0px;
+}
+
+#contactinfo table td {
+        padding: 0.5em;
+        width: 50%;
+}
+
+#contactinfo table td.col1 {
+        text-align: right;
+}
+
+#contactinfo table td.col2 {
+        border-left: 2px solid #5f2c3e;
+        text-align: left;
+}
+
+td a {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+
+}
+
+td a:link {
+        color: #5f2c3e;
+}
+
+td a:visited {
+        color: #3e1423;
+}
+
+td a:hover {
+        color: #a82653;
+}
+
+
+footer a {
+        color: #f6e9d7;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a:link {
+        color: #f6e9d7;
+}
+
+footer a:hover {
+        color: #c565b8;
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -198,10 +305,15 @@ footer {
                 width: 32.5%;
         }
 
+        .container .box img:hover {
+                transform: scale(1.2) rotate(2deg);
+                box-shadow: 0px 0px 20px rgba(0, 0, 0.5);
+        }
+
         .container .heading h3 {
                 font-size: 3em;
         }
-        
+
 }
 
 @media (max-width: 599px) {
@@ -228,6 +340,11 @@ footer {
 
         .container .box .dream {
                 width: 100%;
+        }
+
+        .container .box img:hover {
+                transform: scale(1.1) rotate(2deg);
+                box-shadow: 0px 0px 15px rgba(0, 0, 0.5);
         }
 
         .container .heading h3 {
