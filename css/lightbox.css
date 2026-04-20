@@ -1,0 +1,225 @@
+
+
+/* Styles for the box containing the slideshow and tools */
+
+section#boxbackground {
+   background: #f6e9d7;
+   padding-top: 3em;
+   padding-bottom: 8em;
+}
+
+div#lightbox {
+   position: relative;
+   width: 90%;
+   max-width: 1600px;
+   margin: 20px auto;
+}
+
+/* Styles for slideshow title */
+div#lightbox h1#lbTitle {
+   width: 100%;
+   text-align: center;
+   font-size: 2.4em;
+   font-family: "Chewy", Impact;
+   margin: 0 0 20px 0;
+}
+
+/* Styles for the left and right arrows to move through the slideshow */
+div#lightbox div#lbPrev, div#lightbox div#lbNext {
+   position: absolute;
+   width: 48px;
+   height: 48px;
+   color: #f6e9d7;
+   text-shadow: 2px 2px 4px black;
+   font-size: 24px;
+   font-weight: bold;
+   top: 50%;
+   transform: translateY(-50%);
+   line-height: 48px;
+   text-align: center;
+   z-index: 2;
+   background: rgba(95, 44, 62, 0.8);
+   border-radius: 50%;
+   cursor: pointer;
+   user-select: none;
+}
+
+/* Hovering styles for the left and right arrows */
+div#lightbox div#lbPrev:hover, div#lightbox div#lbNext:hover {
+   background:  #d9c7ad;
+}
+
+/* Horizontal position of the left arrow */
+div#lightbox div#lbPrev {
+   left: 0px;
+}
+
+div#lightbox div#lbNext {
+   right: 0px;
+}
+
+/* Styles for the box containing slide images */
+div#lightbox div#lbImages {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   gap: 18px;
+   width: 100%;
+   height: 520px;
+   overflow: hidden;
+   align-items: stretch;
+}
+
+/* Styles for images within the slideshow box */
+div#lbImages img {
+   flex: 1 1 0;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   background: #f6e9d7;
+}
+
+/* Hovering styles for images within the slideshow box */
+div#lbImages img:hover {
+   filter: opacity(1);
+}
+
+
+
+/* ---------------------------------------------------------*/
+/* Styles for the overlay displaying an image in fullscreen */
+/* ---------------------------------------------------------*/
+
+/* Styles for the overlay */
+div#lbOverlay {
+   position: fixed;
+   z-index: 9999;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(95, 44, 62, 0.95);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 30px;
+}
+
+/* Styles for the figure box within the overlay */
+div#lbOverlay figure {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 90vw;
+   max-width: 1000px;
+   max-height: 90vh;
+   margin: 0;
+}
+
+div#lbOverlay figure img {
+   display: block;
+   max-width: 100%;
+   max-height: 75vh;
+   width: auto;
+   height: auto;
+   box-shadow: 5px 5px 20px black;
+   animation-name: zoom;
+   animation-duration: .2s;
+      animation-timing-function: ease-out;
+
+
+}
+
+/* Styles for the caption within the overlay */
+div#lbOverlay figure figcaption {
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.1em;
+   color: #f6e9d7;
+   margin-top: 18px;
+   max-width: 90%;
+   line-height: 1.4;
+   animation-name: zoom;
+   animation-duration: .2s;
+   animation-timing-function: ease-out;
+}
+
+/* Styles for the overlay close button */
+div#lbOverlay div#lbOverlayClose {
+   position: absolute;
+   top: 16px;
+   right: 20px;
+   color: #f1f1f1;
+   font-size: 40px;
+   line-height: 1;
+   cursor: pointer;
+   user-select: none;
+   z-index: 10000;
+}
+
+/* Hovering styles for the modal window close button */
+div#lbOverlay div#lbOverlayClose:hover {
+   color: #c2d2bd;
+   text-shadow: 3px 3px 0px #421626;
+}
+
+/* Keyframe animation for the opening of the modal window figure and caption */
+@keyframes zoom {
+  from {transform:scale(.5)}
+  to {transform:scale(1)}
+}
+
+
+@media (max-width: 900px) {
+   div#lightbox div#lbImages {
+      height: 380px;
+      gap: 12px;
+   }
+
+   div#lightbox div#lbPrev,
+   div#lightbox div#lbNext {
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      line-height: 40px;
+   }
+
+   div#lightbox div#lbPrev {
+      left: 8px;
+   }
+
+   div#lightbox div#lbNext {
+      right: 8px;
+   }
+}
+
+@media (max-width: 600px) {
+   div#lightbox h1#lbTitle {
+      font-size: 1.8em;
+   }
+
+   div#lightbox div#lbImages {
+      height: 260px;
+      gap: 10px;
+   }
+
+   div#lightbox div#lbPrev,
+   div#lightbox div#lbNext {
+      top: 50%;;
+      width: 34px;
+      height: 34px;
+      font-size: 18px;
+      line-height: 34px;
+   }
+
+   div#lightbox div#lbPrev {
+      left: 6px;
+   }
+
+   div#lightbox div#lbNext {
+      right: 6px;
+   }
+}
